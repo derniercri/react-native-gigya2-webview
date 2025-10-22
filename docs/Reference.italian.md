@@ -191,7 +191,7 @@ Assicurati che la stringa abbia un tipo valido (`true` funziona) e non generi ec
 Su iOS, consulta [`WKUserScriptInjectionTimeAtDocumentStart`](https://developer.apple.com/documentation/webkit/wkuserscriptinjectiontime/wkuserscriptinjectiontimeatdocumentstart?language=objc).
 
 > **Avviso**
-> Su Android, funziona, ma non è affidabile al 100% (vedi [#1609](https://github.com/react-native-webview/react-native-webview/issues/1609) e [#1099](https://github.com/react-native-webview/react-native-webview/pull/1099)).
+> Su Android, funziona, ma non è affidabile al 100% (vedi [#1609](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/issues/1609) e [#1099](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/pull/1099)).
 
 | Tipo   | Obbligatorio | Piattaforma                        |
 | ------ | ------------ | ---------------------------------- |

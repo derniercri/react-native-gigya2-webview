@@ -2,10 +2,10 @@
 
 Here's how to get started quickly with the React Native WebView.
 
-## 1. Add react-native-webview to your dependencies
+## 1. Add react-native-gigya2-webview to your dependencies
 
 ```
-$ yarn add react-native-webview
+$ yarn add react-native-gigya2-webview
 ```
 
 (or)
@@ -13,7 +13,7 @@ $ yarn add react-native-webview
 For npm use
 
 ```
-$ npm install --save react-native-webview
+$ npm install --save react-native-gigya2-webview
 ```
 
 ## 2. Link native dependencies
@@ -23,10 +23,10 @@ From react-native 0.60 autolinking will take care of the link step but don't for
 React Native modules that include native Objective-C, Swift, Java, or Kotlin code have to be "linked" so that the compiler knows to include them in the app.
 
 ```
-$ react-native link react-native-webview
+$ react-native link react-native-gigya2-webview
 ```
 
-_NOTE: If you ever need to uninstall React Native WebView, run `react-native unlink react-native-webview` to unlink it._
+_NOTE: If you ever need to uninstall React Native WebView, run `react-native unlink react-native-gigya2-webview` to unlink it._
 
 ### iOS & macOS:
 
@@ -41,10 +41,10 @@ If you wish to use CocoaPods and haven't set it up yet, please instead refer to 
 
 ### Android:
 
-Android - react-native-webview version <6:
+Android - react-native-gigya2-webview version <6:
 This module does not require any extra step after running the link command 🎉
 
-Android - react-native-webview version >=6.X.X:
+Android - react-native-gigya2-webview version >=6.X.X:
 Please make sure AndroidX is enabled in your project by editing `android/gradle.properties` and adding 2 lines:
 
 ```
@@ -64,7 +64,7 @@ Add the `ReactNativeWebView` project to your solution.
 
 1. Open the solution in Visual Studio 2019
 2. Right-click Solution icon in Solution Explorer > Add > Existing Project
-   Select `node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj`
+   Select `node_modules\react-native-gigya2-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj`
 
 #### **windows/myapp/myapp.vcxproj**
 
@@ -86,7 +86,7 @@ Add `PackageProviders().Append(winrt::ReactNativeWebView::ReactPackageProvider()
 Note if you want to enable scroll with Touch for the WebView component you must disable perspective for your app using [ReactRootView.IsPerspectiveEnabled](https://microsoft.github.io/react-native-windows/docs/ReactRootView#isperspectiveenabled).
 
 ## 3. WebView2 Support
-The WebView2 control is a [WinUI](https://docs.microsoft.com/windows/apps/winui/) control that renders web content using the Microsoft Edge (Chromium) rendering engine. We have added support for the WebView2 control to the react-native-webview community module in v11.18.0.
+The WebView2 control is a [WinUI](https://docs.microsoft.com/windows/apps/winui/) control that renders web content using the Microsoft Edge (Chromium) rendering engine. We have added support for the WebView2 control to the react-native-gigya2-webview community module in v11.18.0.
 If your app is RNW v0.68 or higher, follow these steps:
 
   i. Let autolinking handle adding the `ReactNativeWebView` project to your app.
@@ -101,7 +101,7 @@ Now you can access the WinUI WebView2 control from your app's JavaScript via the
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 class MyWeb extends Component {
   render() {
@@ -119,7 +119,7 @@ Minimal example with inline HTML:
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 class MyInlineWeb extends Component {
   render() {

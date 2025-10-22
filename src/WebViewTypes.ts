@@ -287,6 +287,14 @@ export interface BasicAuthCredential {
   password: string;
 }
 
+export interface GigyaCredentials {
+  sessionToken: string;
+  sessionSecret: string;
+  apiKey: string;
+  apiDomain: string;
+}
+
+
 export interface CommonNativeWebViewProps extends ViewProps {
   cacheEnabled?: boolean;
   incognito?: boolean;
@@ -318,6 +326,7 @@ export interface CommonNativeWebViewProps extends ViewProps {
    */
   applicationNameForUserAgent?: string;
   basicAuthCredential?: BasicAuthCredential;
+  gigyaCredentials?: GigyaCredentials;
 }
 
 export declare type ContentInsetAdjustmentBehavior =
@@ -1342,6 +1351,11 @@ export interface WebViewSharedProps extends ViewProps {
    * An object that specifies the credentials of a user to be used for basic authentication.
    */
   basicAuthCredential?: BasicAuthCredential;
+
+  /**
+   * An object that specifies the credentials of a user to be used for Gigya authentication.
+   */
+  gigyaCredentials?: GigyaCredentials;
 
   /**
    * Inject a JavaScript object to be accessed as a JSON string via JavaScript in the WebView.

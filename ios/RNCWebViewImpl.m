@@ -16,6 +16,7 @@
 #endif // !TARGET_OS_OSX
 
 #import "objc/runtime.h"
+#import <react_native_gigya_webview/react_native_gigya_webview-Swift.h>
 
 static NSTimer *keyboardTimer;
 static NSString *const HistoryShimName = @"ReactNativeHistoryShim";
@@ -139,7 +140,7 @@ RCTAutoInsetsProtocol>
   BOOL _savedKeyboardDisplayRequiresUserAction;
 
   // Workaround for StatusBar appearance bug for iOS 12
-  // https://github.com/react-native-webview/react-native-webview/issues/62
+  // https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/issues/62
   BOOL _isFullScreenVideoOpen;
 #if !TARGET_OS_OSX
   UIStatusBarStyle _savedStatusBarStyle;
@@ -229,7 +230,7 @@ RCTAutoInsetsProtocol>
      name:UIKeyboardWillShowNotification object:nil];
 
     // Workaround for StatusBar appearance bug for iOS 12
-    // https://github.com/react-native-webview/react-native-webview/issues/62
+    // https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/issues/62
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(showFullScreenVideoStatusBars)
                                                  name:UIWindowDidBecomeVisibleNotification
@@ -572,6 +573,17 @@ RCTAutoInsetsProtocol>
 #endif
 
     [self addSubview:_webView];
+
+     if (_gigyaCredentials) {
+      UIViewController *controller = [self topViewController];
+      NSString *sessionToken = [_gigyaCredentials valueForKey:@"sessionToken"];
+      NSString *sessionSecret = [_gigyaCredentials valueForKey:@"sessionSecret"];
+      NSString *apiKey = [_gigyaCredentials valueForKey:@"apiKey"];
+      NSString *apiDomain = [_gigyaCredentials valueForKey:@"apiDomain"];
+
+      [[[RNCGigya alloc] init] initializeWithController:controller webview:_webView sessionToken:sessionToken sessionSecret:sessionSecret apiKey:apiKey apiDomain:apiDomain];
+    }
+  
     [self setHideKeyboardAccessoryView: _savedHideKeyboardAccessoryView];
     [self setKeyboardDisplayRequiresUserAction: _savedKeyboardDisplayRequiresUserAction];
     [self visitSource];

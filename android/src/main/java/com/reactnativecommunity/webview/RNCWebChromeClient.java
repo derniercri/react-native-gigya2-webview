@@ -164,7 +164,7 @@ public class RNCWebChromeClient extends WebChromeClient implements LifecycleEven
                    *
                    * Try to ask user to grant permission using Activity.requestPermissions
                    *
-                   * Find more details here: https://github.com/react-native-webview/react-native-webview/pull/2732
+                   * Find more details here: https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/pull/2732
                    */
                   androidPermission = PermissionRequest.RESOURCE_PROTECTED_MEDIA_ID;
                 }            }

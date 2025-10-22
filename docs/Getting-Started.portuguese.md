@@ -2,10 +2,10 @@
 
 Veja como começar rapidamente com o React Native WebView.
 
-## 1. Adicione react-native-webview às suas dependências
+## 1. Adicione react-native-gigya2-webview às suas dependências
 
 ```
-$ yarn add react-native-webview
+$ yarn add react-native-gigya2-webview
 ```
 
 (ou)
@@ -13,7 +13,7 @@ $ yarn add react-native-webview
 Para caso use o npm
 
 ```
-$ npm install --save react-native-webview
+$ npm install --save react-native-gigya2-webview
 ```
 
 ## 2. Vincular dependências nativas
@@ -23,10 +23,10 @@ A partir do react-native 0.60, o autolinking cuidará da etapa do link, mas não
 Os módulos React Native que incluem código nativo Objective-C, Swift, Java ou Kotlin precisam ser "vinculados" para que o compilador saiba incluí-los no aplicativo.
 
 ```
-$ react-native link react-native-webview
+$ react-native link react-native-gigya2-webview
 ```
 
-_NOTA: Se você precisar desinstalar o React Native WebView, execute `react-native unlink react-native-webview` para desvinculá-lo._
+_NOTA: Se você precisar desinstalar o React Native WebView, execute `react-native unlink react-native-gigya2-webview` para desvinculá-lo._
 
 ### iOS & macOS:
 
@@ -41,10 +41,10 @@ Se você deseja usar o CocoaPods e ainda não o configurou, consulte [esse artig
 
 ### Android:
 
-Android - react-native-webview versão < 6:
+Android - react-native-gigya2-webview versão < 6:
 Este módulo não requer nenhuma etapa extra após executar o comando link 🎉
 
-Android - react-native-webview versão >=6.X.X:
+Android - react-native-gigya2-webview versão >=6.X.X:
 Verifique se o AndroidX está ativado em seu projeto editando `android/gradle.properties` e adicionando 2 linhas:
 
 ```
@@ -63,8 +63,8 @@ Adicione ao projeto `ReactNativeWebView` e `WebViewBridgeComponent` à sua solu�
 
 1. Abra a solução no Visual Studio 2019
 2. Clique com o botão direito do mouse no ícone Soluções > Gerenciador de Soluções > Adicionar > Projeto Existente
-   Selecione `node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj`
-   Selecione `node_modules\react-native-webview\windows\WebViewBridgeComponent\WebViewBridgeComponent.vcxproj`
+   Selecione `node_modules\react-native-gigya2-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj`
+   Selecione `node_modules\react-native-gigya2-webview\windows\WebViewBridgeComponent\WebViewBridgeComponent.vcxproj`
 
 #### **windows/myapp/myapp.vcxproj**
 
@@ -89,7 +89,7 @@ Observe que se você deseja habilitar a rolagem com o Touch para o componente We
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 class MyWeb extends Component {
   render() {
@@ -107,7 +107,7 @@ Exemplo mínimo com HTML:
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 class MyInlineWeb extends Component {
   render() {

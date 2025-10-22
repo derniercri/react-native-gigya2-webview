@@ -9,10 +9,10 @@ Em segundo lugar, gostaríamos que a experiência de contribuição fosse a melh
 Após fazer um fork do repositório, cloná-lo em sua máquina e fazer suas alterações, você deverar testá-las em uma aplicação.
 
 Existem dois métodos de teste:
-1) Rodando os testes do react-native-webview
+1) Rodando os testes do react-native-gigya2-webview
 2) Testando em um projeto `react-native init`
 
-### Rodando os testes dentro do react-native-webview
+### Rodando os testes dentro do react-native-gigya2-webview
 
 #### Para todas as plataformas:
 
@@ -59,8 +59,8 @@ O aplicativo de exemplo para Windows será compilado, o empacotador Metro será 
 Em um novo projeto `react-native init`, faça o seguinte:
 
 ```
-$ yarn add ../react-native-webview
-$ react-native link react-native-webview
+$ yarn add ../react-native-gigya2-webview
+$ react-native link react-native-gigya2-webview
 ```
 
 Você pode encontrar um problema em que o mapa do módulo `jest-haste-map` diz que react-native foi adicionado duas vezes:
@@ -68,13 +68,13 @@ Você pode encontrar um problema em que o mapa do módulo `jest-haste-map` diz q
 ```
 Loading dependency graph...(node:32651) UnhandledPromiseRejectionWarning: Error: jest-haste-map: Haste module naming collision:
   Duplicate module name: react-native
-  Paths: /Users/myuser/TestApp/node_modules/react-native/package.json collides with /Users/myuser/TestApp/node_modules/react-native-webview/node_modules/react-native/package.json
+  Paths: /Users/myuser/TestApp/node_modules/react-native/package.json collides with /Users/myuser/TestApp/node_modules/react-native-gigya2-webview/node_modules/react-native/package.json
 ```
 
 Basta remover seguindo o caminho abaixo:
 
 ```
-$ rm -rf ./node_modules/react-native-webview/node_modules/react-native
+$ rm -rf ./node_modules/react-native-gigya2-webview/node_modules/react-native
 ```
 
 E, em seguida, execute novamente o comando:
@@ -83,11 +83,11 @@ E, em seguida, execute novamente o comando:
 $ react-native start --reset-cache
 ```
 
-Ao fazer uma alteração, você provavelmente precisará desvincular, remover, adicionar novamente e vincular novamente o `react-native-webview`:
+Ao fazer uma alteração, você provavelmente precisará desvincular, remover, adicionar novamente e vincular novamente o `react-native-gigya2-webview`:
 
 ```
-$ react-native unlink react-native-webview && yarn remove react-native-webview
-$ yarn add ../react-native-webview && react-native link react-native-webview
+$ react-native unlink react-native-gigya2-webview && yarn remove react-native-gigya2-webview
+$ yarn add ../react-native-gigya2-webview && react-native link react-native-gigya2-webview
 ```
 
 ## Notas

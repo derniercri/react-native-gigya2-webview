@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   s.homepage     = package['homepage']
   s.platforms    = { :ios => ios_platform, :osx => "10.13", :visionos => "1.0" }
 
-  s.source       = { :git => "https://github.com/react-native-webview/react-native-webview.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/derniercri/react-native-gigya2-webview.git", :tag => "v#{s.version}" }
 
-  s.source_files    = "apple/**/*.{h,m,mm,swift}"
+  s.source_files    = "ios/**/*.{h,m,mm,swift}"
 
   if defined?(install_modules_dependencies()) != nil
     install_modules_dependencies(s);
@@ -42,5 +42,6 @@ Pod::Spec.new do |s|
     else
       s.dependency "React-Core"
     end
+    s.dependency "Gigya"
   end
 end

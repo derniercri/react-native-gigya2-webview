@@ -21,7 +21,7 @@ Il modo più semplice per usare la WebView è passare l'HTML che si desidera ren
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 class MyInlineWeb extends Component {
   render() {
@@ -43,7 +43,7 @@ Questo è l'uso più comune per una WebView.
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 class MyWeb extends Component {
   render() {
@@ -53,7 +53,7 @@ class MyWeb extends Component {
 ```
 
 ### Caricamento dei file HTML locali
-N.B.: Attualmente, questo non funziona come discusso in [#428](https://github.com/react-native-webview/react-native-webview/issues/428) e [#518](https://github.com/react-native-webview/react-native-webview/issues/518). Possibili soluzioni alternative includono l'incorporazione di tutti gli asset con webpack o bundler simili, oppure con l'esecuzione di un [web server locale](https://github.com/futurepress/react-native-static-server).
+N.B.: Attualmente, questo non funziona come discusso in [#428](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/issues/428) e [#518](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/issues/518). Possibili soluzioni alternative includono l'incorporazione di tutti gli asset con webpack o bundler simili, oppure con l'esecuzione di un [web server locale](https://github.com/futurepress/react-native-static-server).
 
 <details><summary>Mostra metodo non funzionante</summary>
 
@@ -61,7 +61,7 @@ A volte potresti avere incluso un file HTML insieme all'app e desideri caricare 
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 const myHtmlFile = require('./my-asset-folder/local-site.html');
 
@@ -76,7 +76,7 @@ Tuttavia, su Android, è necessario mettere il file HTML all'interno della carte
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 class MyWeb extends Component {
   render() {
@@ -93,7 +93,7 @@ A volte si desidera intercettare quando l'utente preme un link nella WebView e f
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 class MyWeb extends Component {
   webview = null;
@@ -193,7 +193,7 @@ Normalmente, le app che non hanno il permesso di accesso alla fotocamera possono
 Il caricamento dei file tramite l'elemento `<input type="file" />` non è supportato su Android 4.4 KitKat (vedi [dettagli](https://github.com/delight-im/Android-AdvancedWebView/issues/4#issuecomment-70372146)):
 
 ```jsx
-import { WebView } from "react-native-webview";
+import { WebView } from "react-native-gigya2-webview";
 
 WebView.isFileUploadSupported().then(res => {
   if (res === true) {
@@ -271,7 +271,7 @@ Questo è uno script che viene eseguito immediatamente dopo il caricamento inizi
 ```jsx
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 export default class App extends Component {
   render() {
@@ -286,7 +286,7 @@ export default class App extends Component {
       <View style={{ flex: 1 }}>
         <WebView
           source={{
-            uri: 'https://github.com/react-native-webview/react-native-webview',
+            uri: 'https://github.com/react-native-gigya2-webview/react-native-gigya2-webview',
           }}
           onMessage={(event) => {}}
           injectedJavaScript={runFirst}
@@ -305,7 +305,7 @@ Impostando `injectedJavaScriptForMainFrameOnly: false`, l'iniezione del JavaScri
 <img alt="Screenshot del repo su Github" width="200" src="https://user-images.githubusercontent.com/1479215/53609254-e5dc9c00-3b7a-11e9-9118-bc4e520ce6ca.png" />
 
 _Roba da smanettoni_
-> Su iOS, ~~`injectedJavaScript` esegue un metodo su WebView chiamato `evaluateJavaScript:completionHandler:`~~ - questa affermazione non è più valida a partire dalla versione `8.2.0`. Invece, utilizziamo un `WKUserScript` con un tempo di iniezione `WKUserScriptInjectionTimeAtDocumentEnd`. Di conseguenza, `injectedJavaScript` non restituisce più un valore di valutazione né genera un avviso nella console. Nel caso improbabile in cui la tua app dipenda da questo comportamento, consulta i passaggi di migrazione [qui](https://github.com/react-native-webview/react-native-webview/pull/1119#issuecomment-574919464) per mantenere un comportamento equivalente.
+> Su iOS, ~~`injectedJavaScript` esegue un metodo su WebView chiamato `evaluateJavaScript:completionHandler:`~~ - questa affermazione non è più valida a partire dalla versione `8.2.0`. Invece, utilizziamo un `WKUserScript` con un tempo di iniezione `WKUserScriptInjectionTimeAtDocumentEnd`. Di conseguenza, `injectedJavaScript` non restituisce più un valore di valutazione né genera un avviso nella console. Nel caso improbabile in cui la tua app dipenda da questo comportamento, consulta i passaggi di migrazione [qui](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/pull/1119#issuecomment-574919464) per mantenere un comportamento equivalente.
 > Su Android, `injectedJavaScript` esegue un metodo sulla WebView di Android chiamato `evaluateJavascriptWithFallback`.
 > Su Windows, `injectedJavaScript` esegue un metodo sulla WebView WinRT/C++ chiamato `InvokeScriptAsync`.
 
@@ -315,7 +315,7 @@ Questo è uno script che viene eseguito **prima** del caricamento della pagina w
 ```jsx
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 export default class App extends Component {
   render() {
@@ -327,7 +327,7 @@ export default class App extends Component {
       <View style={{ flex: 1 }}>
         <WebView
           source={{
-            uri: 'https://github.com/react-native-webview/react-native-webview',
+            uri: 'https://github.com/react-native-gigya2-webview/react-native-gigya2-webview',
           }}
           injectedJavaScriptBeforeContentLoaded={runFirst}
         />
@@ -340,11 +340,11 @@ export default class App extends Component {
 Questo esegue il JavaScript nella stringa `runFirst` prima del caricamento della pagina. In questo caso, il valore di `window.isNativeApp` verrà impostato su `true` prima dell'esecuzione del codice web.
 
 > **Attenzione**
-> Su Android, questo funziona, ma non è del tutto affidabile al 100% (vedi [#1609](https://github.com/react-native-webview/react-native-webview/issues/1609) e [#1099](https://github.com/react-native-webview/react-native-webview/pull/1099)).
+> Su Android, questo funziona, ma non è del tutto affidabile al 100% (vedi [#1609](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/issues/1609) e [#1099](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/pull/1099)).
 
 Impostando `injectedJavaScriptBeforeContentLoadedForMainFrameOnly: false`, l'iniezione di JavaScript avverrà su tutti i frame (non solo il frame principale) se supportato dalla piattaforma specifica. Tuttavia, sebbene il supporto per `injectedJavaScriptBeforeContentLoadedForMainFrameOnly: false` sia stato implementato per iOS e macOS, non è chiaro che sia effettivamente possibile iniettare JS negli iframe in questo punto del ciclo di vita della pagina, quindi non è consigliato far affidamento sul comportamento atteso di questa prop quando è impostata su `false`.
 
-> Su iOS, ~~`injectedJavaScriptBeforeContentLoaded` esegue un metodo su WebView chiamato `evaluateJavaScript:completionHandler:`~~ - questo non è più vero a partire dalla versione `8.2.0`. Invece, utilizziamo un `WKUserScript` con il tempo di iniezione `WKUserScriptInjectionTimeAtDocumentStart`. Di conseguenza, `injectedJavaScriptBeforeContentLoaded` non restituisce più un valore di valutazione né registra un avviso nella console. Nel caso improbabile che la tua app dipenda da questo comportamento, consulta i passaggi di migrazione [qui](https://github.com/react-native-webview/react-native-webview/pull/1119#issuecomment-574919464) per mantenere un comportamento equivalente.
+> Su iOS, ~~`injectedJavaScriptBeforeContentLoaded` esegue un metodo su WebView chiamato `evaluateJavaScript:completionHandler:`~~ - questo non è più vero a partire dalla versione `8.2.0`. Invece, utilizziamo un `WKUserScript` con il tempo di iniezione `WKUserScriptInjectionTimeAtDocumentStart`. Di conseguenza, `injectedJavaScriptBeforeContentLoaded` non restituisce più un valore di valutazione né registra un avviso nella console. Nel caso improbabile che la tua app dipenda da questo comportamento, consulta i passaggi di migrazione [qui](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/pull/1119#issuecomment-574919464) per mantenere un comportamento equivalente.
 > Su Android, `injectedJavaScript` esegue un metodo sul WebView di Android chiamato `evaluateJavascriptWithFallback`.
 > Nota sulla compatibilità di Android: per le applicazioni che mirano a `Build.VERSION_CODES.N` o versioni successive, lo state JavaScript da una WebView vuota non viene più mantenuto tra le navigazioni come `loadUrl(java.lang.String)`. Ad esempio, le variabili globali e le funzioni definite prima di chiamare `loadUrl(java.lang.String)` non esisteranno nella pagina caricata. Le applicazioni devono utilizzare l'API nativa di Android `addJavascriptInterface(Object, String)` per mantenere gli oggetti JavaScript tra le navigazioni.
 
@@ -354,7 +354,7 @@ Sebbene comodo, il lato negativo della prop `injectedJavaScript` precedentemente
 ```jsx
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 export default class App extends Component {
   render() {
@@ -372,7 +372,7 @@ export default class App extends Component {
         <WebView
           ref={(r) => (this.webref = r)}
           source={{
-            uri: 'https://github.com/react-native-webview/react-native-webview',
+            uri: 'https://github.com/react-native-gigya2-webview/react-native-gigya2-webview',
           }}
         />
       </View>
@@ -399,7 +399,7 @@ Poter inviare JavaScript alla pagina web è fantastico, ma cosa succede quando l
 ```jsx
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 export default class App extends Component {
   render() {

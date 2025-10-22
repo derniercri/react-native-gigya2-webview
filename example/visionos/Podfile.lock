@@ -881,7 +881,7 @@ PODS:
   - React-Mapbuffer (0.73.8):
     - glog
     - React-debug
-  - react-native-webview (13.10.0):
+  - react-native-gigya2-webview (13.10.0):
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
@@ -1111,7 +1111,7 @@ DEPENDENCIES:
   - "React-jsinspector (from `../../node_modules/@callstack/react-native-visionos/ReactCommon/jsinspector-modern`)"
   - "React-logger (from `../../node_modules/@callstack/react-native-visionos/ReactCommon/logger`)"
   - "React-Mapbuffer (from `../../node_modules/@callstack/react-native-visionos/ReactCommon`)"
-  - react-native-webview (from `../..`)
+  - react-native-gigya2-webview (from `../..`)
   - "React-nativeconfig (from `../../node_modules/@callstack/react-native-visionos/ReactCommon`)"
   - "React-NativeModulesApple (from `../../node_modules/@callstack/react-native-visionos/ReactCommon/react/nativemodule/core/platform/ios`)"
   - "React-perflogger (from `../../node_modules/@callstack/react-native-visionos/ReactCommon/reactperflogger`)"
@@ -1197,7 +1197,7 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@callstack/react-native-visionos/ReactCommon/logger"
   React-Mapbuffer:
     :path: "../../node_modules/@callstack/react-native-visionos/ReactCommon"
-  react-native-webview:
+  react-native-gigya2-webview:
     :path: "../.."
   React-nativeconfig:
     :path: "../../node_modules/@callstack/react-native-visionos/ReactCommon"
@@ -1283,7 +1283,7 @@ SPEC CHECKSUMS:
   React-jsinspector: b9e3b72a79e0ac805605d3b05844bc7fca2481a7
   React-logger: b38a95eea49914f02cd8764d48b3def4469b9eae
   React-Mapbuffer: 95f55d07bb729137f77065c06a331271234f1b55
-  react-native-webview: ec30be41d258f27313c80e9319f6d0507e27e7e2
+  react-native-gigya2-webview: ec30be41d258f27313c80e9319f6d0507e27e7e2
   React-nativeconfig: efa01c928b57f2c7adb282ad49dbf35a85f39772
   React-NativeModulesApple: 5ffa203c4591bb74750a992d45a780a886f6377d
   React-perflogger: 8cbba16952af4beffd0c45a9e3aca9079de5f53a
