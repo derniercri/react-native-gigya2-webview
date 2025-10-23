@@ -44,9 +44,14 @@ public class RNCWebViewClient extends WebViewClient {
     protected boolean mLastLoadFailed = false;
     protected RNCWebView.ProgressChangedFilter progressChangedFilter = null;
     protected @Nullable RNCBasicAuthCredential basicAuthCredential = null;
+    protected @Nullable RNCGigyaCredentials gigyaCredentials = null;
 
     public void setBasicAuthCredential(@Nullable RNCBasicAuthCredential credential) {
         basicAuthCredential = credential;
+    }
+
+    public void setGigyaCredentials(@Nullable RNCGigyaCredentials credential) {
+        gigyaCredentials = credential;
     }
 
     @Override

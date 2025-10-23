@@ -1,9 +1,9 @@
 # React Native WebView
 
-![Dai una stella a questo repo](https://img.shields.io/github/stars/react-native-webview/react-native-webview?style=flat-square&label=stelle)
+![Dai una stella a questo repo](https://img.shields.io/github/stars/react-native-gigya2-webview/react-native-gigya2-webview?style=flat-square&label=stelle)
 [![PRs gradite](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![Versione NPM](https://img.shields.io/npm/v/react-native-webview.svg?style=flat-square)](https://www.npmjs.com/package/react-native-webview)
-![NPM Downloads mensili](https://img.shields.io/npm/dm/react-native-webview.svg)
+[![Versione NPM](https://img.shields.io/npm/v/react-native-gigya2-webview.svg?style=flat-square)](https://www.npmjs.com/package/react-native-gigya2-webview)
+![NPM Downloads mensili](https://img.shields.io/npm/dm/react-native-gigya2-webview.svg)
 
 **React Native WebView** è un componente WebView mantenuto dalla community per React Native. È un sostituto del WebView integrato, il  quale è stato rimosso dal core.
 
@@ -31,12 +31,12 @@ Questo progetto è compatibile con le seguenti piattaforme: **iOS**, **Android**
 Questo progetto segue la convenzione del [versionamento semantico](https://semver.org/lang/it/). Non esitiamo a rilasciare modifiche che potrebbero causare incompatibilità (breaking changes), ma lo faremo all'interno di una versione principale.
 
 ### Utilizzo
-Importa il componente `WebView` da `react-native-webview` per poi usarlo nel seguente modo:
+Importa il componente `WebView` da `react-native-gigya2-webview` per poi usarlo nel seguente modo:
 
 ```tsx
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 // ...
 const MyWebComponent = () => {
@@ -48,7 +48,7 @@ Per ulteriori informazioni, leggi il [riferimento alle API](Reference.italian.md
 
 ### Problemi comuni
 - Se riscontri `Invariant Violation: Native component for "RNCWebView does not exist"`, probabilmente significa che hai dimenticato di eseguire `react-native link` o c'è stato qualche errore durante il processo di collegamento.
-- In caso di un errore di compilazione durante l'operazione `:app:mergeDexRelease`, devi abilitare il supporto multidex in `android/app/build.gradle`, come discusso in [questa issue](https://github.com/react-native-webview/react-native-webview/issues/1344#issuecomment-650544648).
+- In caso di un errore di compilazione durante l'operazione `:app:mergeDexRelease`, devi abilitare il supporto multidex in `android/app/build.gradle`, come discusso in [questa issue](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/issues/1344#issuecomment-650544648).
 
 ### Contribuire
 Le contribuzioni sono benvenute, per maggiori informazioni consulta la pagina [Contributing.md](Contributing.italian.md).

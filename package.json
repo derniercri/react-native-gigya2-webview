@@ -1,5 +1,5 @@
 {
-  "name": "react-native-webview",
+  "name": "react-native-gigya2-webview",
   "description": "React Native WebView component for iOS, Android, macOS, and Windows",
   "main": "index.js",
   "main-internal": "src/index.ts",
@@ -7,11 +7,13 @@
   "typings": "index.d.ts",
   "author": "Jamon Holmgren <jamon@infinite.red>",
   "contributors": [
-    "Thibault Malbranche <malbranche.thibault@gmail.com>"
+    "Thibault Malbranche <malbranche.thibault@gmail.com>",
+    "Martin Frouin <martin.frouin@derniercri.io>",
+    "Maxime Marousez <maxime.marousez@derniercri.io>"
   ],
   "license": "MIT",
   "version": "13.16.0",
-  "homepage": "https://github.com/react-native-webview/react-native-webview#readme",
+  "homepage": "https://github.com/derniercri/react-native-gigya2-webview#readme",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -72,7 +74,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-native-webview/react-native-webview.git"
+    "url": "https://github.com/derniercri/react-native-gigya2-webview.git"
   },
   "files": [
     "android/src",
@@ -86,7 +88,7 @@
     "src",
     "index.js",
     "index.d.ts",
-    "react-native-webview.podspec",
+    "react-native-gigya2-webview.podspec",
     "react-native.config.js"
   ],
   "codegenConfig": {

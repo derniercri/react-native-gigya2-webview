@@ -852,7 +852,7 @@ PODS:
   - React-Mapbuffer (0.73.17):
     - glog
     - React-debug
-  - react-native-webview (13.10.0):
+  - react-native-gigya2-webview (13.10.0):
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
@@ -1062,7 +1062,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../../node_modules/react-native-macos/ReactCommon/jsinspector-modern`)
   - React-logger (from `../../node_modules/react-native-macos/ReactCommon/logger`)
   - React-Mapbuffer (from `../../node_modules/react-native-macos/ReactCommon`)
-  - react-native-webview (from `../..`)
+  - react-native-gigya2-webview (from `../..`)
   - React-nativeconfig (from `../../node_modules/react-native-macos/ReactCommon`)
   - React-NativeModulesApple (from `../../node_modules/react-native-macos/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../../node_modules/react-native-macos/ReactCommon/reactperflogger`)
@@ -1144,7 +1144,7 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/react-native-macos/ReactCommon/logger"
   React-Mapbuffer:
     :path: "../../node_modules/react-native-macos/ReactCommon"
-  react-native-webview:
+  react-native-gigya2-webview:
     :path: "../.."
   React-nativeconfig:
     :path: "../../node_modules/react-native-macos/ReactCommon"
@@ -1225,7 +1225,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 78a222766213a1d842dda23f75ee81a985b868e3
   React-logger: 680127d09d5e8d034448fd4a6557ef674f0bbcc1
   React-Mapbuffer: cc8181d8102277c6707f625b3dd19700b6d7ea2a
-  react-native-webview: ec30be41d258f27313c80e9319f6d0507e27e7e2
+  react-native-gigya2-webview: ec30be41d258f27313c80e9319f6d0507e27e7e2
   React-nativeconfig: 610e6442c02cdcf6a3608f90a109bb4938a58248
   React-NativeModulesApple: 2e4915c417c9f8c52edbdd5aed39a64cf98d5bd8
   React-perflogger: 55cf6b01a1ecd15c470d612a5353e2ac5b8cfe45

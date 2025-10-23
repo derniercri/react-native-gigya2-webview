@@ -2,7 +2,7 @@
 
 Embora a visualização da Web integrada tenha muitos recursos, não é possível lidar com todos os casos de uso no React Native. Você pode, no entanto, estender a visualização da web com código nativo sem bifurcar o React Native ou duplicar todo o código de visualização da web existente.
 
-Antes de fazer isso, você deve estar familiarizado com os conceitos em [componentes nativos da interface do usuário](native-components-ios). Você também deve se familiarizar com o [código nativo para visualizações da web](https://github.com/react-native-webview/react-native-webview/blob/master/apple/RNCWebViewManager.m), pois você terá para usar isso como referência ao implementar novos recursos, embora não seja necessário um entendimento profundo.
+Antes de fazer isso, você deve estar familiarizado com os conceitos em [componentes nativos da interface do usuário](native-components-ios). Você também deve se familiarizar com o [código nativo para visualizações da web](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/blob/master/apple/RNCWebViewManager.m), pois você terá para usar isso como referência ao implementar novos recursos, embora não seja necessário um entendimento profundo.
 
 ## Código Nativo
 
@@ -202,7 +202,7 @@ Se você quiser adicionar props customizadas ao seu componente nativo, você pod
 
 Para eventos, o manipulador de eventos deve sempre ser definido para uma função. Isso significa que não é seguro usar o manipulador de eventos diretamente de `this.props`, pois o usuário pode não ter fornecido um. A abordagem padrão é criar um manipulador de eventos em sua classe e, em seguida, invocar o manipulador de eventos fornecido em `this.props` se ele existir.
 
-Se você não tiver certeza de como algo deve ser implementado do lado do JS, consulte [WebView.ios.tsx](https://github.com/react-native-webview/react-native-webview/blob/master/src/WebView.ios.tsx) na fonte React Native WebView.
+Se você não tiver certeza de como algo deve ser implementado do lado do JS, consulte [WebView.ios.tsx](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/blob/master/src/WebView.ios.tsx) na fonte React Native WebView.
 
 ```javascript
 export default class CustomWebView extends Component {

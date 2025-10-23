@@ -9,10 +9,10 @@ In secondo luogo, desideriamo che l'esperienza di contribuzione sia il migliore 
 Dopo aver forkato il reposito, clonalo sulla tuo computer e apporta le modifiche. Successivamente, potrai testarle in un'applicazione.
 
 Ci sono due metodi per testare:
-1) testare all'interno di una copia di react-native-webview;
+1) testare all'interno di una copia di react-native-gigya2-webview;
 2) testare in un nuovo progetto creato con `react-native init`.
 
-### Testare in react-native-webview
+### Testare in react-native-gigya2-webview
 
 #### Per tutte le piattaforme:
 
@@ -59,7 +59,7 @@ L'app di esempio per Windows verrà compilata, Metro bundler verrà avviato e l'
 In un nuovo progetto `react-native init`, fai quanto segue:
 
 ```
-$ yarn add <percorso locale a react-native-webview>
+$ yarn add <percorso locale a react-native-gigya2-webview>
 ```
 
 Potresti riscontrare un problema in cui la mappatura dei moduli `jest-haste-map` segnala che react-native è stato aggiunto due volte.
@@ -67,13 +67,13 @@ Potresti riscontrare un problema in cui la mappatura dei moduli `jest-haste-map`
 ```
 Loading dependency graph...(node:32651) UnhandledPromiseRejectionWarning: Error: jest-haste-map: Haste module naming collision:
   Duplicate module name: react-native
-  Paths: /Users/myuser/TestApp/node_modules/react-native/package.json collides with /Users/myuser/TestApp/node_modules/react-native-webview/node_modules/react-native/package.json
+  Paths: /Users/myuser/TestApp/node_modules/react-native/package.json collides with /Users/myuser/TestApp/node_modules/react-native-gigya2-webview/node_modules/react-native/package.json
 ```
 
 In tal caso rimuovi il secondo path in questo modo:
 
 ```
-$ rm -rf ./node_modules/react-native-webview/node_modules/react-native
+$ rm -rf ./node_modules/react-native-gigya2-webview/node_modules/react-native
 ```
 
 E fai ripartire il packager assicurandoti di passare la flag per resettare la cache:
@@ -82,15 +82,15 @@ E fai ripartire il packager assicurandoti di passare la flag per resettare la ca
 $ react-native start --reset-cache
 ```
 
-Potresti anche visualizzare un avviso sulla console riguardante "Invalid hook call", seguito da un errore di interpretazione che indica "null is not an object (evaluating 'dispatcher.useRef')." Per risolvere questo problema, segui la stessa procedura di prima, ma questa volta elimina la cartella `react-native-webview/node_modules/react`.
+Potresti anche visualizzare un avviso sulla console riguardante "Invalid hook call", seguito da un errore di interpretazione che indica "null is not an object (evaluating 'dispatcher.useRef')." Per risolvere questo problema, segui la stessa procedura di prima, ma questa volta elimina la cartella `react-native-gigya2-webview/node_modules/react`.
 
 (se cancelli `react` prima di `react-native`, potresti incappare in un altro errore: "View config getter callback for component 'RNCWebView' must be a function," per risolvere il problema elimina anche `react-native`)
 
-Quando apporti una modifica, molto probabilmente dovrai rimuovere e aggiungere nuovamente `react-native-webview`:
+Quando apporti una modifica, molto probabilmente dovrai rimuovere e aggiungere nuovamente `react-native-gigya2-webview`:
 
 ```
-$ yarn remove react-native-webview
-$ yarn add ../react-native-webview
+$ yarn remove react-native-gigya2-webview
+$ yarn add ../react-native-gigya2-webview
 ```
 
 ## Note

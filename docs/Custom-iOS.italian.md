@@ -2,7 +2,7 @@
 
 Nonostante la web view integrata disponga di molte funzionalità, non è possibile gestire tutti i casi d'uso in React Native. Tuttavia, è possibile estendere la web view con codice nativo senza dover forkare React Native o duplicare l'intero codice esistente della web view.
 
-Prima di procedere, è consigliabile avere un'idea di base  dei concetti legati ai [native UI components](native-components-ios) (componenti dell'interfaccia utente nativi). Inoltre, è opportuno familiarizzarsi con il [native code for web views](https://github.com/react-native-webview/react-native-webview/blob/master/apple/RNCWebViewManager.m) (codice nativo per le web view), poiché sarà necessario farvi riferimento durante l'implementazione delle nuove funzionalità, anche se non è richiesta una conoscenza approfondita.
+Prima di procedere, è consigliabile avere un'idea di base  dei concetti legati ai [native UI components](native-components-ios) (componenti dell'interfaccia utente nativi). Inoltre, è opportuno familiarizzarsi con il [native code for web views](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/blob/master/apple/RNCWebViewManager.m) (codice nativo per le web view), poiché sarà necessario farvi riferimento durante l'implementazione delle nuove funzionalità, anche se non è richiesta una conoscenza approfondita.
 
 ## Codice nativo
 Come per i componenti nativi regolari, è necessario un gestore della view e una web view.
@@ -177,7 +177,7 @@ Per richiamare il tuo componente nativo, puoi usare il metodo `requireNativeComp
 ```javascript
 import React, { Component } from 'react';
 import { requireNativeComponent } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 export default class CustomWebView extends Component {
   render() {
@@ -194,7 +194,7 @@ Se desideri aggiungere props personalizzate al tuo componente nativo, puoi utili
 
 Per gli eventi, l'handler deve essere sempre una funzione. Ciò significa che non è sicuro chiamare  l'handler direttamente da `this.props`, poiché l'utente potrebbe non averne fornito uno. L'approccio di base consiste nel creare un handler delle'evento nella tua classe, per poi invocarlo solamente se l'handler fornito da `this.props` esiste.
 
-Se non sei sicuro su come qualcosa debba essere implementato nel lato JS, dai un'occhiata al file [WebView.android.tsx](https://github.com/react-native-webview/react-native-webview/blob/master/src/WebView.ios.tsx) nel codice sorgente di React Native WebView.
+Se non sei sicuro su come qualcosa debba essere implementato nel lato JS, dai un'occhiata al file [WebView.android.tsx](https://github.com/react-native-gigya2-webview/react-native-gigya2-webview/blob/master/src/WebView.ios.tsx) nel codice sorgente di React Native WebView.
 
 ```javascript
 export default class CustomWebView extends Component {

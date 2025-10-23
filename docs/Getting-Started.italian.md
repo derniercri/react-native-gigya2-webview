@@ -1,10 +1,10 @@
 # Guida introduttiva a React Native WebView
 Ecco come iniziare rapidamente con React Native WebView.
 
-## 1. Aggiungi react-native-webview alle tue dipendenze
+## 1. Aggiungi react-native-gigya2-webview alle tue dipendenze
 
 ```
-$ yarn add react-native-webview
+$ yarn add react-native-gigya2-webview
 ```
 
 (oppure)
@@ -12,7 +12,7 @@ $ yarn add react-native-webview
 Per uso con npm
 
 ```
-$ npm install --save react-native-webview
+$ npm install --save react-native-gigya2-webview
 ```
 
 ## 2. Linking dei moduli native
@@ -21,10 +21,10 @@ A partire da react-native 0.60, il collegamento (linking) delle librerie viene g
 I moduli React Native che contengono codice nativo Objective-C, Swift, Java o Kotlin devono essere "linkati" affinché possano essere inclusi correttamente nell'applicazione durante la fase di compilazione.
 
 ```
-$ react-native link react-native-webview
+$ react-native link react-native-gigya2-webview
 ```
 
-_NOTA: Quando disinstalli React Native WebView, esegui `react-native unlink react-native-webview` per rimuoverne il collegamento._
+_NOTA: Quando disinstalli React Native WebView, esegui `react-native unlink react-native-gigya2-webview` per rimuoverne il collegamento._
 
 ### iOS & macOS:
 Se usi CocoaPods, nella directory `ios/` o `macos/` esegui:
@@ -36,10 +36,10 @@ $ pod install
 Anche se è possibile eseguire il collegamento manuale seguendo il vecchio metodo tramite il tutorial di [react-native](https://reactnative.dev/docs/linking-libraries-ios), troviamo più semplice utilizzare CocoaPods. Se desideri usare CocoaPods e non lo hai ancora configurato, ti invitiamo a fare riferimento a [quest'articolo](https://engineering.brigad.co/demystifying-react-native-modules-linking-ae6c017a6b4a).
 
 ### Android:
-Android - react-native-webview **versione <6**:
+Android - react-native-gigya2-webview **versione <6**:
 Questo modulo non richiede alcun passaggio aggiuntivo dopo aver eseguito il comando di collegamento 🎉
 
-Android - react-native-webview **versione >=6.X.X**:
+Android - react-native-gigya2-webview **versione >=6.X.X**:
 Assicurati che AndroidX sia abilitato nel tuo progetto modificando il file `android/gradle.properties` e aggiungendo queste due righe:
 
 ```
@@ -58,7 +58,7 @@ Aggiungi il progetto `ReactNativeWebView` alla tua soluzione.
 
 1. Apri la soluzione in Visual Studio 2019.
 2. Fai clic con il pulsante destro del mouse sull'icona della soluzione nell'Esplora soluzioni > Aggiungi > Progetto esistente.
-   Seleziona `node_modules\react-native-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj`.
+   Seleziona `node_modules\react-native-gigya2-webview\windows\ReactNativeWebView\ReactNativeWebView.vcxproj`.
 
 #### **windows/myapp/myapp.vcxproj**
 
@@ -78,7 +78,7 @@ Aggiungi `PackageProviders().Append(winrt::ReactNativeWebView::ReactPackageProvi
 Nota che se desideri abilitare lo scroll tramite touch per il componente WebView, devi disabilitare la prospettiva per la tua app tramite [ReactRootView.IsPerspectiveEnabled](https://microsoft.github.io/react-native-windows/docs/ReactRootView#isperspectiveenabled).
 
 ## 3. Supporto per WebView2
-Il controllo WebView2 è un controllo [WinUI](https://learn.microsoft.com/it-it/windows/apps/winui/) che renderizza contenuti web utilizzando il motore di rendering di Microsoft Edge (Chromium). Abbiamo aggiunto il supporto per il controllo WebView2 al modulo della comunità react-native-webview nella versione 11.18.0.
+Il controllo WebView2 è un controllo [WinUI](https://learn.microsoft.com/it-it/windows/apps/winui/) che renderizza contenuti web utilizzando il motore di rendering di Microsoft Edge (Chromium). Abbiamo aggiunto il supporto per il controllo WebView2 al modulo della comunità react-native-gigya2-webview nella versione 11.18.0.
 Se la tua app utilizza RNW v0.68 o versioni successive, segui questi passaggi:
 
 1. Lascia che l'autolinking si occupi di aggiungere il progetto `ReactNativeWebView` alla tua app.
@@ -92,7 +92,7 @@ Ora puoi accedere al controllo WebView2 di WinUI da JavaScript della tua app tra
 ## 4. Importa la webview nel tuo componente
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 class MyWeb extends Component {
   render() {
@@ -110,7 +110,7 @@ Esempio minimo usando HTML inline:
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-gigya2-webview';
 
 class MyInlineWeb extends Component {
   render() {

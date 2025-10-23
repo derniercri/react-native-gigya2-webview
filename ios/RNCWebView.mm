@@ -366,6 +366,15 @@ auto stringToOnLoadingFinishNavigationTypeEnum(std::string value) {
         }];
     }
 
+    if (oldViewProps.gigyaCredentials.sessionToken != newViewProps.gigyaCredentials.sessionToken || oldViewProps.gigyaCredentials.sessionSecret != newViewProps.gigyaCredentials.sessionSecret || oldViewProps.sessionSecret.apiKey != newViewProps.sessionSecret.apiKey || oldViewProps.sessionSecret.apiDomain != newViewProps.sessionSecret.apiDomain) {
+        [_view setBasicAuthCredential: @{
+            @"sessionToken": RCTNSStringFromString(newViewProps.gigyaCredentials.sessionToken),
+            @"sessionSecret": RCTNSStringFromString(newViewProps.gigyaCredentials.sessionSecret),
+            @"apiKey": RCTNSStringFromString(newViewProps.gigyaCredentials.apiKey),
+            @"apiDomain": RCTNSStringFromString(newViewProps.gigyaCredentials.apiDomain)
+        }];
+    }
+
 #if !TARGET_OS_OSX
     if (oldViewProps.contentInsetAdjustmentBehavior != newViewProps.contentInsetAdjustmentBehavior) {
         if (newViewProps.contentInsetAdjustmentBehavior == RNCWebViewContentInsetAdjustmentBehavior::Never) {
