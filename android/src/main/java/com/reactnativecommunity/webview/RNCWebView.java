@@ -98,6 +98,16 @@ public class RNCWebView extends WebView implements LifecycleEventListener {
 
     public void setGigyaCredentials(RNCGigyaCredentials credential) {
         mRNCWebViewClient.setGigyaCredentials(credential);
+        
+        // Initialize Gigya with the provided credentials
+        if (credential != null && credential.apiKey != null && credential.apiDomain != null) {
+            gigya.initialize(credential.apiKey, credential.apiDomain, this);
+            
+            // Set session if tokens are provided
+            if (credential.sessionToken != null && credential.sessionSecret != null) {
+                gigya.login(credential.sessionToken, credential.sessionSecret);
+            }
+        }
     }
 
     public void setSendContentSizeChangeEvents(boolean sendContentSizeChangeEvents) {
