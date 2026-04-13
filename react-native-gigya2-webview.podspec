@@ -1,7 +1,7 @@
 require 'json'
 
 new_arch_enabled = ENV['RCT_NEW_ARCH_ENABLED'] == '1'
-ios_platform = new_arch_enabled ? '11.0' : '9.0'
+ios_platform = '13.4'
 
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/derniercri/react-native-gigya2-webview.git", :tag => "v#{s.version}" }
 
-  s.source_files    = "ios/**/*.{h,m,mm,swift}"
+  s.source_files    = ["ios/**/*.{h,m,mm,swift}", "apple/**/*.{h,m,mm,swift}"]
 
   if defined?(install_modules_dependencies()) != nil
     install_modules_dependencies(s);
@@ -42,6 +42,7 @@ Pod::Spec.new do |s|
     else
       s.dependency "React-Core"
     end
-    s.dependency "Gigya"
   end
+
+  s.dependency "Gigya"
 end

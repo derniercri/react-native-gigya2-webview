@@ -366,8 +366,8 @@ auto stringToOnLoadingFinishNavigationTypeEnum(std::string value) {
         }];
     }
 
-    if (oldViewProps.gigyaCredentials.sessionToken != newViewProps.gigyaCredentials.sessionToken || oldViewProps.gigyaCredentials.sessionSecret != newViewProps.gigyaCredentials.sessionSecret || oldViewProps.sessionSecret.apiKey != newViewProps.sessionSecret.apiKey || oldViewProps.sessionSecret.apiDomain != newViewProps.sessionSecret.apiDomain) {
-        [_view setBasicAuthCredential: @{
+    if (oldViewProps.gigyaCredentials.sessionToken != newViewProps.gigyaCredentials.sessionToken || oldViewProps.gigyaCredentials.sessionSecret != newViewProps.gigyaCredentials.sessionSecret || oldViewProps.gigyaCredentials.apiKey != newViewProps.gigyaCredentials.apiKey || oldViewProps.gigyaCredentials.apiDomain != newViewProps.gigyaCredentials.apiDomain) {
+        [_view setGigyaCredentials: @{
             @"sessionToken": RCTNSStringFromString(newViewProps.gigyaCredentials.sessionToken),
             @"sessionSecret": RCTNSStringFromString(newViewProps.gigyaCredentials.sessionSecret),
             @"apiKey": RCTNSStringFromString(newViewProps.gigyaCredentials.apiKey),
